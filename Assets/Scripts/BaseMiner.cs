@@ -30,6 +30,10 @@ public class BaseMiner : MonoBehaviour
             {
                 CollectGold();
             }
+            else
+            {
+                DepositGold();
+            }
         })).Play();
     }
 
@@ -43,4 +47,13 @@ public class BaseMiner : MonoBehaviour
         yield return null;
     }
 
+    protected virtual void DepositGold()
+    {
+
+    }
+
+    public void ChangeGoal()
+    {
+        isTimeToCollect = !isTimeToCollect;
+    }
 }
